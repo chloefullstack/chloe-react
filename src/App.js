@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 
 import SignForm from './components/SignForm'
+import Header from './components/Header/Header'
+
 import FirstComponent from './components/FirstComponent'
 import SecondComponent from './components/SecondComponent'
 
@@ -27,10 +29,11 @@ class App extends Component {
         let { userName, password } = this.state
         return (
             <div className="App">
-            <SignForm
-                userName={userName} password={password}
-                onValueChange={this.onValueChange}
-            ></SignForm>
+                <Header></Header>
+                <SignForm
+                    userName={userName} password={password}
+                    onValueChange={this.onValueChange}
+                ></SignForm>
             </div>
         );
     }
