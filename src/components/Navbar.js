@@ -23,14 +23,14 @@ class Navbar extends Component {
                             Account
                         </a>
                         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a className="dropdown-item" href="/signin">Log In</a>
-                            <a className="dropdown-item" href="#">Sign Up</a>
+                            <a className="dropdown-item" href="#">Log In</a>
+                            <a className="dropdown-item" href="/Signin">Sign In</a>
                             <div className="dropdown-divider"></div>
                             <a className="dropdown-item" href="#">Log Out</a>
                         </div>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Contact</a>
                     </li>
                 </ul>
                 <form className="form-inline my-2 my-lg-0">
