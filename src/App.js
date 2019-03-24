@@ -4,6 +4,7 @@ import './App.css';
 
 import SignForm from './components/SignForm'
 import Header from './components/Header/Header'
+import Navbar from './components/Navbar'
 
 import FirstComponent from './components/FirstComponent'
 import SecondComponent from './components/SecondComponent'
@@ -29,6 +30,7 @@ class App extends Component {
         let { userName, password } = this.state
         return (
             <div className="App">
+                <Navbar></Navbar>
                 <Header></Header>
                 <SignForm
                     userName={userName} password={password}
