@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import SignForm from './SignForm'
 import Header from './Header/Header'
 import Navbar from './Navbar'
 

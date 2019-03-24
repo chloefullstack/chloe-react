@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import SignForm from './SignForm'
+import Header from './Header/Header'
+import Navbar from './Navbar'
 
 class SignIn extends Component {
     constructor(props){
@@ -21,6 +23,8 @@ class SignIn extends Component {
     render() {
         let { userName, password } = this.state
         return <div>
+            <Navbar></Navbar>
+            <Header></Header>
             <SignForm
                 userName={userName} password={password}
                 onValueChange={this.onValueChange}>
