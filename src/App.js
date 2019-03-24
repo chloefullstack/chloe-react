@@ -1,43 +1,24 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Route} from "react-router-dom";
+
 import './App.css';
+import SignIn from './components/SignIn'
+import About from './components/About'
+import HomePage from './components/HomePage'
 
-import SignForm from './components/SignForm'
-import Header from './components/Header/Header'
-import Navbar from './components/Navbar'
-
-import FirstComponent from './components/FirstComponent'
-import SecondComponent from './components/SecondComponent'
 
 class App extends Component {
-    constructor(props){
-        super(props)
-        this.state = {
-            userName: '',
-            password: ''
-        }
-    }
-    
-    onValueChange = (e) => {
-        console.log(e.target);
-        this.setState({
-            [e.target.name]: e.target.value
-            // userName: e.target.value
-        })
-    }
     
     render() {
-        let { userName, password } = this.state
         return (
-            <div className="App">
-                <Navbar></Navbar>
-                <Header></Header>
-                <SignForm
-                    userName={userName} password={password}
-                    onValueChange={this.onValueChange}
-                ></SignForm>
-            </div>
-        );
+            <BrowserRouter>
+                <div>
+                    <Route path='/' component={HomePage} exact></Route>
+                    <Route path='/signin' component={SignIn}></Route>
+                    <Route path='/about' component={About}></Route>
+                </div>
+            </BrowserRouter>
+        )
     }
 }
 
