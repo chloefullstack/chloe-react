@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch} from "react-router-dom";
 import './App.css';
 import SignIn from './components/SignIn'
 import About from './components/About'
-import Detail from './components/Detail'
+import Detail from './components/Detail/Detail'
 import HomePage from './components/HomePage'
 import Error from './components/Error'
 
