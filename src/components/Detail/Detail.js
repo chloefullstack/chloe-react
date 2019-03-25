@@ -25,7 +25,7 @@ class Detail extends Component {
             <hr></hr>
             <div>
                 <div>
-                    <div className='category'> History</div>
+                    <div className='category'>History</div>
                     <div className='paragraph-space'>
                         The Yorkshire Terrier (also called a "Yorkie") originated in Yorkshire, a county in northern England (and the adjoining Lancashire). In the mid-19th century, workers from Scotland came to Yorkshire in search of work and brought with them several different varieties of small terriers. Breeding of the Yorkshire Terrier was "principally accomplished by the people—mostly operatives in cotton and woollen mills—in the counties of Yorkshire and Lancashire." Details are scarce. Mrs A. Foster is quoted as saying in 1886, "If we consider that the mill operatives who originated the breed...were nearly all ignorant men, unaccustomed to imparting information for public use, we may see some reason why reliable facts have not been easily attained."
                     </div>
@@ -34,7 +34,7 @@ class Detail extends Component {
                     </div>
 
                 </div>
-                <div className='category'> About the Yorkshire Terrier</div>
+                <div className='category'>About the Yorkshire Terrier</div>
                 <div className='paragraph-space'>
                     The Yorkshire Terrier is a compact, toy-size terrier of no more than seven pounds whose crowning glory is a floor-length, silky coat of steel blue and a rich golden tan.
                 </div>
