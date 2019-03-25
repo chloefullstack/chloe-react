@@ -3,23 +3,23 @@ import 'bootstrap/dist/css/bootstrap.css';
 import one from './image/one.jpg';
 import two from './image/two.jpg';
 import york from './image/york.jpg';
-
+import './detail.scss'
 
 
 class Carousel extends Component {
     
     render() {
         return (
-            <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
-                <div className="carousel-inner" style={{display:'flex', justifyContent:'center'}}>
-                    <div className="carousel-item active">
-                        <img height={300} src={one} className="d-block" alt="one"/>
+            <div id="carouselExampleControls" className="carousel slide carousel-bg" data-ride="carousel">
+                <div className="carousel-inner">
+                    <div className="carousel-item active" >
+                        <img src={one} className="d-block" alt="one"/>
                     </div>
                     <div className="carousel-item">
-                        <img height={300} src={two} className="d-block" alt="two"/>
+                        <img src={two} className="d-block" alt="two"/>
                     </div>
                     <div className="carousel-item">
-                        <img height={300} src={york} className="d-block" alt="york"/>
+                        <img src={york} className="d-block" alt="york"/>
                     </div>
                 </div>
                 <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
