@@ -21,12 +21,15 @@ class Navbar extends Component {
                     <li className="nav-item">
                         <a className="nav-link" href="/about">About</a>
                     </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href="/show">Show</a>
+                    </li>
                     <li className="nav-item dropdown">
                         <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Account
                         </a>
                         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a className="dropdown-item" href="#">Log In</a>
+                            <a className="dropdown-item" href="/login">Log In</a>
                             <a className="dropdown-item" href="/Signin">Sign In</a>
                             <div className="dropdown-divider"></div>
                             <a className="dropdown-item" href="#">Log Out</a>
