@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header/Header';
 import Navbar from './Navbar';
-import one from '../image/one.jpg';
+import one from './Detail/image/one.jpg';
 
 
 class HomePage extends Component {
