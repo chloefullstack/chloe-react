@@ -10,6 +10,7 @@ import HomePage from './components/HomePage'
 import Error from './components/Error'
 import LoginForm from './components/LoginForm'
 import ShowListView from './containers/ShowListView'
+import PuppyDetail from './components/PuppyDetail'
 
 
 class App extends Component {
@@ -24,6 +25,8 @@ class App extends Component {
                     <Route path='/detail' component={Detail}></Route>
                     <Route path='/login' component={LoginForm}></Route>
                     <Route path='/show' component={ShowListView}></Route>
+                    <Route path='/puppydetail' component={PuppyDetail}></Route>
+
                     <Route component={Error}></Route>
                 </Switch>
             </BrowserRouter>

@@ -7,17 +7,17 @@ class ShowListView extends Component {
         puppyinfo: []
     };
 
-    fetchArticles = () => {
-        axios.get("http://127.0.0.1:8000/api").then(res => {
-        this.setState({
-            puppyinfo: res.data
-        });
-        console.log(res.data)
+    fetchPuppy = () => {
+        axios.get("http://127.0.0.1:8000/").then(res => {
+            this.setState({
+                puppyinfo: res.data
+            });
+            console.log(res.data)
         });
     }
 
     componentDidMount() {
-        this.fetchArticles();
+        this.fetchPuppy();
     } // when the component is rendered, then it must get the data and then update the state
 
 
