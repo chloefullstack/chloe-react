@@ -8,7 +8,7 @@ class ShowListView extends Component {
     };
 
     fetchPuppy = () => {
-        axios.get("http://127.0.0.1:8000/").then(res => {
+        axios.get("http://127.0.0.1:8000/york/").then(res => {
             this.setState({
                 puppyinfo: res.data
             });

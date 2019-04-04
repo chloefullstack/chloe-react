@@ -12,7 +12,6 @@ class PuppyDetail extends Component {
     };
 
     fetchPuppy = (id) => {
-        console.log(id)
         axios.get('http://127.0.0.1:8000/'+id).then(res => {
         this.setState({
             puppyinfo: res.data

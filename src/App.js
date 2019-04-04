@@ -11,6 +11,7 @@ import Error from './components/Error'
 import LoginForm from './components/LoginForm'
 import ShowListView from './containers/ShowListView'
 import PuppyDetail from './components/PuppyDetail'
+import CreateCard from './components/CreateCard';
 
 
 class App extends Component {
@@ -24,9 +25,9 @@ class App extends Component {
                     <Route path='/about' component={About}></Route>
                     <Route path='/detail' component={Detail}></Route>
                     <Route path='/login' component={LoginForm}></Route>
-                    <Route path='/show' component={ShowListView}></Route>
+                    <Route path='/show' component={ShowListView} exact></Route>
                     <Route path='/puppydetail' component={PuppyDetail}></Route>
-
+                    <Route path='/show/createcard' component={CreateCard}></Route>
                     <Route component={Error}></Route>
                 </Switch>
             </BrowserRouter>
