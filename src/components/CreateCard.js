@@ -18,7 +18,6 @@ class CreateCard extends Component {
         }
     }
 
-
     onChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value
@@ -35,18 +34,31 @@ class CreateCard extends Component {
             Authorization: `Token ${this.props.token}`,
         }; //POST传参序列化
         
-        axios({
+        // axios({
+        //     method: 'POST',
+        //     url: 'http://localhost:8000/york/create/',
+        //     data: {
+        //         name: this.state.name, 
+        //         sex: this.state.sex, 
+        //         age: this.state.age, 
+        //         description: this.state.description
+        //     }
+        // }).then(res => {
+        //     // this.props.push('/');
+        //     console.log(res.data)
+        // });
+        let result = await axios({
             method: 'POST',
-            url: 'http://127.0.0.1:8000/york/create',
+            url: 'http://localhost:8000/york/create/',
             data: {
                 name: this.state.name, 
                 sex: this.state.sex, 
                 age: this.state.age, 
                 description: this.state.description
             }
-        }).then(res => {
-            console.log(res.data)
-        });
+        })
+        console.log(result);
+        
     }
 
     render() {
@@ -55,34 +67,32 @@ class CreateCard extends Component {
             <Navbar></Navbar>
             <Header></Header>
             <div style={{marginTop:'20px'}}>
-                <div>
-                    <div class="form-group">
-                        <label for="formGroupExampleInput">Puppy's Name</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Puppy's Name" name='name' value={name} onChange={this.onChange}/>
-                    </div>
-                    <div class="form-group">
-                        <label for="formGroupExampleInput2">Puppy's sex</label>
-                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name='sex' value={sex} onChange={this.onChange}> 
-                            <option selected>Sex</option>
-                            <option value="F">Femail</option>
-                            <option value="M">Male</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="formGroupExampleInput2">Puppy's age</label>
-                        <input type="textarea" class="form-control" id="formGroupExampleInput2" placeholder="Puppy's age" name='age' value={age} onChange={this.onChange}/>
-                    </div>
-                    <div class="form-group">
-                        <label for="formGroupExampleInput2">Description</label>
-                        <textarea class="form-control" id="validationTextarea" placeholder="Description" name='description' value={description} onChange={this.onChange}></textarea>
-                    </div>
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="customFile" />
-                        <label class="custom-file-label" for="customFile">Choose file</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" value='Save' name='_save' class="btn btn-primary" onClick={this.onSubmit}/>
-                    </div>
+                <div className="form-group">
+                    <label>Puppy's Name</label>
+                    <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Puppy's Name" name='name' value={name} onChange={this.onChange}/>
+                </div>
+                <div className="form-group">
+                    <label >Puppy's sex</label>
+                    <select className="custom-select mr-sm-2" id="inlineFormCustomSelect" name='sex' value={sex} onChange={this.onChange}> 
+                        <option defaultValue>Sex</option>
+                        <option value="F">Femail</option>
+                        <option value="M">Male</option>
+                    </select>
+                </div>
+                <div className="form-group">
+                    <label>Puppy's age</label>
+                    <input type="textarea" className="form-control" id="formGroupExampleInput2" placeholder="Puppy's age" name='age' value={age} onChange={this.onChange}/>
+                </div>
+                <div className="form-group">
+                    <label>Description</label>
+                    <textarea className="form-control" id="validationTextarea" placeholder="Description" name='description' value={description} onChange={this.onChange}></textarea>
+                </div>
+                <div className="custom-file">
+                    <input type="file" className="custom-file-input" id="customFile" />
+                    <label className="custom-file-label" >Choose file</label>
+                </div>
+                <div className="form-group">
+                    <input type="submit" value='Save' name='_save' className="btn btn-primary" onClick={this.onSubmit}/>
                 </div>
             </div>
         </div>
