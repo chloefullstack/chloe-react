@@ -32,4 +32,14 @@
   }
 }
 
+.cards {
+  min-width: 18rem;
 
+}
+
+.card-section {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-evenly;
+  margin: 20px;
+}
