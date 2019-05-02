@@ -17,7 +17,7 @@ class Show extends Component {
             </a>
             <div className='card-section'>
                 {data.map((item, index) => (
-                    <div className="cards"  >
+                    <div className="cards" key={index} >
                         <img src={item.profile_image} style={{height:'300px',width:'auto', maxWidth:'287px',margin:'auto'}} className="card-img-top" alt="..."/>
                         <div className="card-body">
                             <h5 className="card-title">Puppy Name: {item.name}</h5>
